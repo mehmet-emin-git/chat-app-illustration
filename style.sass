@@ -10,19 +10,19 @@ $desaturated-violet : hsl(271, 36%, 24%) // (main heading)
 $dark-grayish-violet: hsl(270, 7%, 64%) // (paragraph)
 
 // gradient
-$bg-gradient: linear-gradien(35deg, hsl(293, 100%, 63%),hsl(264, 100%, 61%))
+$bg-gradient: linear-gradient(180deg, hsl(293, 100%, 63%),hsl(264, 100%, 61%))
 // - light-magenta: hsl(293, 100%, 63%)
 // - light-violet: hsl(264, 100%, 61%)
 
 // secondary colors
 $white: hsl(0, 0%, 100%)
-$light-grayish-violet : hsl(270, 20%, 96%) // (app background)
+$light-grayish-violet : hsl(282, 38%, 97%) // (app background)
 $very-dark-desaturated-violet : hsl(271, 36%, 24%) // (submit button background)
 $very-light-magenta : hsl(289, 100%, 72%) // (radio button outline)
 
 // global styles
 *,*::before,*::after
-	box-sizing: bordre-box
+	box-sizing: border-box
 
 body
 	font-size: 16px
@@ -31,3 +31,62 @@ body
 
 img
 	max-width: 100%
+	
+.flex
+	display: flex
+	justify-content: center
+	align-items: center
+	
+.container
+	width: 100vw
+	height: 100vh
+	position: relative
+	overflow: hidden
+	
+	&::before
+		content: ""
+		display: block
+		background: $bg-gradient
+		border-bottom-right-radius: 450px
+		border-bottom-left-radius: 450px
+		width: 35vw
+		height: 86vh
+		position: absolute
+		top:0
+		left:-6vw
+		z-index: -10 
+	
+	&::after
+		content: ""
+		display: block
+		background: $light-grayish-violet
+		border-top-right-radius: 450px
+		border-top-left-radius: 450px
+		width: 35vw
+		height: 84vh
+		position: absolute
+		bottom:0
+		right:-14vw
+		z-index: -10
+		
+.phone
+	width:50%
+	.frame
+		height: 600px
+		width: 375px
+		border: 10px solid $white
+		border-radius: 30px
+
+.text
+	width: 50%
+	
+	h1
+		font-size: 2.5rem
+		font-weight: 500
+		color: $desaturated-violet
+		
+	p
+		font-size: 1.1rem
+		line-height: 1.6em
+		color: $dark-grayish-violet
+		max-width: 68%

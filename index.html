@@ -8,13 +8,13 @@
   <title>Chat app illustration</title>
 </head>
 <body>
-  <main class="container">
+  <main class="container flex">
     <div class="phone">
       <div class="frame">
         <!-- notch -->
         <div class="notch"></div>
         <!-- header -->
-        <div class="header">
+        <div class="header flex">
           <div class="user">
             <img src="./images/avatar.jpg" alt="avatar" class="avatar">
             <div class="info">
@@ -31,10 +31,10 @@
         <div class="message-a">
           <p>Could you send over some pictures of your dog, please?</p>
         </div>
-        <div class="images">
-          <img src="./images/dog-imag-1.jpg" alt="dog image 1" class="dog">
-          <img src="./images/dog-imag-2.jpg" alt="dog image 2" class="dog">
-          <img src="./images/dog-imag-3.jpg" alt="dog image 3" class="dog">
+        <div class="images flex">
+          <img src="./images/dog-image-1.jpg" alt="dog image 1" class="dog">
+          <img src="./images/dog-image-2.jpg" alt="dog image 2" class="dog">
+          <img src="./images/dog-image-3.jpg" alt="dog image 3" class="dog">
         </div>
         <div class="message-b">
           <p>Here are a few pictures. She’s a happy girl!</p>
@@ -55,6 +55,12 @@
           <span class="time">1 hour walk</span>
           <span class="dollar-price">$49</span>
         </div>
+
+        <div class="send">
+          <label for="send-msg"></label>
+          <input type="text" id="send-msg" name="send-msg" placeholder="Type a message…">
+          <button class="btn"></button>
+        </div>
       </div>
       </div>
     </div>
@@ -64,28 +70,6 @@
     </div>
   </main>
 
-  
-  
-
-  That sounds great. I’d be happy with that.
-
-  
-
-  
-
- 
-
-  
-
-  30 minute walk
-  $29
-
-  1 hour walk
-  $49
-
-  Type a message…
-
-  
 <!--   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Mechitoua Mohammed Amine</a>.
