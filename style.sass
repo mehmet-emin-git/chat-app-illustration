@@ -31,6 +31,8 @@ body
 	font-size: 16px
 	margin: 0
 	font-family: 'Rubik', sans-serif
+	width: 100vw
+	height: 100% 
 
 img
 	max-width: 100%
@@ -45,7 +47,6 @@ img
 	height: 100vh
 	position: relative
 	background: $light-grayish-violet
-	overflow: hidden
 	z-index: -2
 	
 	&::before
@@ -65,13 +66,12 @@ img
 		content: ""
 		display: block
 		background: $shape-bg
-		border-top-right-radius: 450px
-		border-top-left-radius: 450px
-		width: 35vw
+		border-top-left-radius: 270px
+		width: 21vw
 		height: 84vh
 		position: absolute
 		bottom:0
-		right:-14vw
+		right: 0
 		z-index: -1
 		
 // the phone styles 
@@ -189,6 +189,7 @@ img
 				max-width: 145px
 				border-radius: 10px
 				background: $white
+				text-align: left 
 				color: #333
 				border-bottom-right-radius: 4px
 				margin-left: auto
@@ -284,3 +285,55 @@ img
 		line-height: 1.6em
 		color: $dark-grayish-violet
 		max-width: 68%
+		
+
+// media query
+@media (max-width: 1100px)
+	body
+		height: 100vh
+	.container
+		flex-direction: column
+		text-align: center
+		padding: 1rem
+		height: 100vh
+		
+		&::before
+			content: ""
+			display: block
+			background: $bg-gradient
+			border-bottom-right-radius: 450px
+			border-bottom-left-radius: 0
+			width: 48vw
+			height: 65vh
+			position: absolute
+			top:0
+			left: 0
+	
+		&::after
+			width: 51vw
+			height: 55vh
+		
+
+		.phone
+			width: 100%
+			 
+			.frame
+				margin-right: 0
+			
+				
+		.text
+			width: 100% 
+			margin: 1.5rem 0
+			p
+				margin: 0 auto
+				max-width: 95% 
+				
+@media (max-width: 375px)
+	body
+		height: 100%
+		
+	.container
+		height: 100%
+	
+		.phone
+			margin-top: 0 

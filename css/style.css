@@ -7,6 +7,8 @@ body {
   font-size: 16px;
   margin: 0;
   font-family: "Rubik", sans-serif;
+  width: 100vw;
+  height: 100%;
 }
 
 img {
@@ -24,7 +26,6 @@ img {
   height: 100vh;
   position: relative;
   background: #f7f7f7;
-  overflow: hidden;
   z-index: -2;
 }
 .container::before {
@@ -44,13 +45,12 @@ img {
   content: "";
   display: block;
   background: #f4f0f4;
-  border-top-right-radius: 450px;
-  border-top-left-radius: 450px;
-  width: 35vw;
+  border-top-left-radius: 270px;
+  width: 21vw;
   height: 84vh;
   position: absolute;
   bottom: 0;
-  right: -14vw;
+  right: 0;
   z-index: -1;
 }
 
@@ -167,6 +167,7 @@ img {
   max-width: 145px;
   border-radius: 10px;
   background: white;
+  text-align: left;
   color: #333;
   border-bottom-right-radius: 4px;
   margin-left: auto;
@@ -262,6 +263,61 @@ img {
   line-height: 1.6em;
   color: #a39daa;
   max-width: 68%;
+}
+
+@media (max-width: 1100px) {
+  body {
+    height: 100vh;
+  }
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    height: 100vh;
+  }
+  .container::before {
+    content: "";
+    display: block;
+    background: linear-gradient(180deg, #e942ff, #8838ff);
+    border-bottom-right-radius: 450px;
+    border-bottom-left-radius: 0;
+    width: 48vw;
+    height: 65vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .container::after {
+    width: 51vw;
+    height: 55vh;
+  }
+  .container .phone {
+    width: 100%;
+  }
+  .container .phone .frame {
+    margin-right: 0;
+  }
+  .container .text {
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+  .container .text p {
+    margin: 0 auto;
+    max-width: 95%;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    height: 100%;
+  }
+
+  .container {
+    height: 100%;
+  }
+  .container .phone {
+    margin-top: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
