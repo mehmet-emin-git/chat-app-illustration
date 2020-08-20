@@ -1,89 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="/css/style.css">
-  <title>Chat app illustration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Chat app illustration</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-  <main class="container flex">
-    <div class="phone flex">
-      <div class="frame">
-        <!-- notch -->
-        <div class="notch"></div>
-        <!-- header -->
-        <div class="header flex">
-          <div class="user flex">
-            <img src="./images/avatar.jpg" alt="avatar" class="avatar">
-            <div class="info">
-              <h4>Samuel Green</h4>
-              <p>Available to Walk</p>
+    <main class="container flex">
+        <div class="phone flex">
+            <div class="frame">
+                <!-- notch -->
+                <div class="notch"></div>
+                <!-- header -->
+                <div class="header flex">
+                    <div class="user flex">
+                        <img src="./images/avatar.jpg" alt="avatar" class="avatar">
+                        <div class="info">
+                            <h4>Samuel Green</h4>
+                            <p>Available to Walk</p>
+                        </div>
+                    </div>
+                    <div class="dots flex">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+                <!-- mesages board -->
+                <div class="msg-board">
+                    <div class="message-a">
+                        <p>That sounds great. I’d be happy with that.</p>
+                    </div>
+                    <div class="message-a">
+                        <p>Could you send over some pictures of your dog, please?</p>
+                    </div>
+                    <div class="images flex">
+                        <img src="./images/dog-image-1.jpg" alt="dog image 1" class="dog">
+                        <img src="./images/dog-image-2.jpg" alt="dog image 2" class="dog">
+                        <img src="./images/dog-image-3.jpg" alt="dog image 3" class="dog">
+                    </div>
+                    <div class="message-b">
+                        <p>Here are a few pictures. She’s a happy girl!</p>
+                    </div>
+                    <div class="message-b small">
+                        <p>Can you make it?</p>
+                    </div>
+                    <div class="message-a">
+                        <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+                    </div>
+                    <div class="price flex">
+                        <div class="flex">
+                            <span class="circle"></span>
+                            <span class="time">30 minute walk</span>
+                        </div>
+                        <span class="dollar-price">$29</span>
+                    </div>
+                    <div class="price flex">
+                        <div class="flex">
+                            <span class="circle"></span>
+                            <span class="time">1 hour walk</span>
+                        </div>
+                        <span class="dollar-price">$49</span>
+                    </div>
+                    <div class="send flex">
+                        <div class="input">
+                            <label for="send-msg"></label>
+                            <input type="text" id="send-msg" name="send-msg" placeholder="Type a message…">
+                            <button class="btn"><img class="chevron" src="./images/chevron.svg" alt="chevron icon"></button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="dots flex">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
         </div>
-      <!-- mesages board -->
-      <div class="msg-board">
-        <div class="message-a">
-          <p>That sounds great. I’d be happy with that.</p>
+        <div class="text">
+            <h1>Simple booking</h1>
+            <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.</p>
         </div>
-        <div class="message-a">
-          <p>Could you send over some pictures of your dog, please?</p>
-        </div>
-        <div class="images flex">
-          <img src="./images/dog-image-1.jpg" alt="dog image 1" class="dog">
-          <img src="./images/dog-image-2.jpg" alt="dog image 2" class="dog">
-          <img src="./images/dog-image-3.jpg" alt="dog image 3" class="dog">
-        </div>
-        <div class="message-b">
-          <p>Here are a few pictures. She’s a happy girl!</p>
-        </div>
-        <div class="message-b small">
-          <p>Can you make it?</p>
-        </div>
-        <div class="message-a">
-          <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
-        </div>
-        <div class="price flex">
-          <div class="flex">
-            <span class="circle"></span>
-            <span class="time">30 minute walk</span>
-          </div>
-          <span class="dollar-price">$29</span>
-        </div>
-        <div class="price flex">
-          <div class="flex">
-            <span class="circle"></span>
-            <span class="time">1 hour walk</span>
-          </div>
-          <span class="dollar-price">$49</span>
-        </div>
-
-        <div class="send flex">
-          <div class="input">
-            <label for="send-msg"></label>
-            <input type="text" id="send-msg" name="send-msg" placeholder="Type a message…">
-            <button class="btn"><img class="chevron" src="./images/chevron.svg" alt="chevron icon"></button>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-    <div class="text">
-      <h1>Simple booking</h1>
-      <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.</p>
-    </div>
-  </main>
-
-<!--   <div class="attribution">
+    </main>
+    <!--   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Mechitoua Mohammed Amine</a>.
   </div> -->
 </body>
+
 </html>
