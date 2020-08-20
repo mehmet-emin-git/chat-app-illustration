@@ -58,13 +58,15 @@ img {
   width: 50%;
 }
 .phone .frame {
-  height: 600px;
+  height: 520px;
   width: 255px;
   border: 10px solid white;
   border-radius: 30px;
   overflow: hidden;
   position: relative;
   background: #f7f7f7;
+  margin-right: -16rem;
+  box-shadow: 15px 25px 28px 3px rgba(0, 0, 0, 0.08);
 }
 .phone .frame .notch {
   background: white;
@@ -140,6 +142,73 @@ img {
   border-radius: 50%;
   background: white;
   margin: 0.05rem 0;
+}
+.phone .frame .msg-board {
+  padding: 0.5rem 0.5rem;
+}
+.phone .frame .msg-board p {
+  margin: 0;
+  font-size: 0.5rem;
+  letter-spacing: 0.5px;
+  line-height: 1.5em;
+}
+.phone .frame .msg-board .message-a {
+  background: rgba(146, 65, 200, 0.09);
+  color: #9241c8;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  max-width: 145px;
+  border-radius: 10px;
+  border-bottom-left-radius: 4px;
+}
+.phone .frame .msg-board .message-b {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  max-width: 145px;
+  border-radius: 10px;
+  background: white;
+  color: #333;
+  border-bottom-right-radius: 4px;
+  margin-left: auto;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08);
+}
+.phone .frame .msg-board .small {
+  text-align: right;
+  max-width: 90px;
+  margin-bottom: 1.5rem;
+}
+.phone .frame .msg-board .images {
+  margin: 0.8rem 0 0.7rem 0;
+  justify-content: flex-end;
+}
+.phone .frame .msg-board .images img:not(:last-child) {
+  margin-right: 0.5rem;
+}
+.phone .frame .msg-board .images img {
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 10px;
+}
+.phone .frame .msg-board .price {
+  background: linear-gradient(to right, #e942ff, #8838ff);
+  max-width: 75%;
+  color: white;
+  padding: 0.4rem;
+  justify-content: space-around;
+  border-radius: 10px;
+  border-bottom-left-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+.phone .frame .msg-board .price .circle {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #e570ff;
+  border-radius: 50%;
+  width: 0.9rem;
+  height: 0.9rem;
+}
+.phone .frame .msg-board .price .time {
+  font-size: 0.55rem;
 }
 
 .text {
