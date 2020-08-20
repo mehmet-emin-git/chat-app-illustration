@@ -11,12 +11,14 @@ $dark-grayish-violet: hsl(270, 7%, 64%) // (paragraph)
 
 // gradient
 $bg-gradient: linear-gradient(180deg, hsl(293, 100%, 63%),hsl(264, 100%, 61%))
+$header-gradient: linear-gradient(to left, hsl(293, 100%, 63%),hsl(264, 100%, 61%))
 // - light-magenta: hsl(293, 100%, 63%)
 // - light-violet: hsl(264, 100%, 61%)
 
 // secondary colors
 $white: hsl(0, 0%, 100%)
-$light-grayish-violet : hsl(282, 38%, 97%) // (app background)
+$light-grayish-violet : hsl(0, 0%, 97%) // (app background)
+$shape-bg : hsl(290, 17%, 95%) // (shape background)
 $very-dark-desaturated-violet : hsl(271, 36%, 24%) // (submit button background)
 $very-light-magenta : hsl(289, 100%, 72%) // (radio button outline)
 
@@ -41,7 +43,9 @@ img
 	width: 100vw
 	height: 100vh
 	position: relative
+	background: $light-grayish-violet
 	overflow: hidden
+	z-index: -2
 	
 	&::before
 		content: ""
@@ -54,12 +58,12 @@ img
 		position: absolute
 		top:0
 		left:-6vw
-		z-index: -10 
+		z-index: -1
 	
 	&::after
 		content: ""
 		display: block
-		background: $light-grayish-violet
+		background: $shape-bg
 		border-top-right-radius: 450px
 		border-top-left-radius: 450px
 		width: 35vw
@@ -67,16 +71,98 @@ img
 		position: absolute
 		bottom:0
 		right:-14vw
-		z-index: -10
+		z-index: -1
 		
+// the phone styles 
 .phone
 	width:50%
+	// justify-content: flex-end
+	
 	.frame
 		height: 600px
-		width: 375px
+		width: 255px
 		border: 10px solid $white
 		border-radius: 30px
+		overflow: hidden
+		position: relative
+		background: $light-grayish-violet
+		
+		.notch
+			background: $white
+			width: 9rem
+			height: 2rem
+			border-radius: 15px
+			position: absolute
+			left: 3rem
+			top: -.8rem 
 
+		.header
+			justify-content: space-between
+			background: $header-gradient
+			height: 70px
+			padding: 0 1.3rem
+			border-bottom-right-radius: 5px
+			border-bottom-left-radius: 5px
+			box-shadow: 0px 3px 5px rgba(0,0,0,.1)
+
+			.user
+				padding: 2.5rem 0 1rem 0
+				position: relative
+				
+				&::before
+					content: ""
+					background: $white
+					position: absolute
+					width: .45rem
+					height: .1rem
+					top: 3.35rem
+					left: -.8rem
+					transform: rotate(-50deg)
+				
+				&::after
+					content: ""
+					background: $white
+					position: absolute
+					width: .45rem
+					height: .1rem
+					top: 3.6rem
+					left: -.78rem
+					transform: rotate(50deg)
+				
+				.avatar
+					width: 1.5rem
+					border: 1px solid $white
+					border-radius: 50%
+					
+				.info
+					text-align: left
+					margin-left: .5rem
+					color: $white
+
+					h4
+						font-size: .75rem
+						margin: 0
+						padding-left: .15rem
+					
+					p
+						font-size: .6rem
+						margin: 0
+						padding: .1rem .2rem .2rem
+						color: $white
+						opacity: .7 
+			
+			.dots
+				flex-direction: column
+				padding-top: 1.7rem
+				.dot
+					width: .14rem
+					height: .14rem
+					border-radius: 50%
+					background: $white
+					margin: 0.05rem 0 
+
+
+// the main heading styles
 .text
 	width: 50%
 	

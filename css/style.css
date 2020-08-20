@@ -23,7 +23,9 @@ img {
   width: 100vw;
   height: 100vh;
   position: relative;
+  background: #f7f7f7;
   overflow: hidden;
+  z-index: -2;
 }
 .container::before {
   content: "";
@@ -36,12 +38,12 @@ img {
   position: absolute;
   top: 0;
   left: -6vw;
-  z-index: -10;
+  z-index: -1;
 }
 .container::after {
   content: "";
   display: block;
-  background: #f9f4fa;
+  background: #f4f0f4;
   border-top-right-radius: 450px;
   border-top-left-radius: 450px;
   width: 35vw;
@@ -49,7 +51,7 @@ img {
   position: absolute;
   bottom: 0;
   right: -14vw;
-  z-index: -10;
+  z-index: -1;
 }
 
 .phone {
@@ -57,9 +59,87 @@ img {
 }
 .phone .frame {
   height: 600px;
-  width: 375px;
+  width: 255px;
   border: 10px solid white;
   border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  background: #f7f7f7;
+}
+.phone .frame .notch {
+  background: white;
+  width: 9rem;
+  height: 2rem;
+  border-radius: 15px;
+  position: absolute;
+  left: 3rem;
+  top: -0.8rem;
+}
+.phone .frame .header {
+  justify-content: space-between;
+  background: linear-gradient(to left, #e942ff, #8838ff);
+  height: 70px;
+  padding: 0 1.3rem;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.phone .frame .header .user {
+  padding: 2.5rem 0 1rem 0;
+  position: relative;
+}
+.phone .frame .header .user::before {
+  content: "";
+  background: white;
+  position: absolute;
+  width: 0.45rem;
+  height: 0.1rem;
+  top: 3.35rem;
+  left: -0.8rem;
+  transform: rotate(-50deg);
+}
+.phone .frame .header .user::after {
+  content: "";
+  background: white;
+  position: absolute;
+  width: 0.45rem;
+  height: 0.1rem;
+  top: 3.6rem;
+  left: -0.78rem;
+  transform: rotate(50deg);
+}
+.phone .frame .header .user .avatar {
+  width: 1.5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.phone .frame .header .user .info {
+  text-align: left;
+  margin-left: 0.5rem;
+  color: white;
+}
+.phone .frame .header .user .info h4 {
+  font-size: 0.75rem;
+  margin: 0;
+  padding-left: 0.15rem;
+}
+.phone .frame .header .user .info p {
+  font-size: 0.6rem;
+  margin: 0;
+  padding: 0.1rem 0.2rem 0.2rem;
+  color: white;
+  opacity: 0.7;
+}
+.phone .frame .header .dots {
+  flex-direction: column;
+  padding-top: 1.7rem;
+}
+.phone .frame .header .dots .dot {
+  width: 0.14rem;
+  height: 0.14rem;
+  border-radius: 50%;
+  background: white;
+  margin: 0.05rem 0;
 }
 
 .text {
